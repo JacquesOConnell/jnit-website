@@ -110,6 +110,36 @@
           <article><small>04 · Security automation</small><h3>Posture Auditor</h3><p>Read-only Python and Boto3 checks for IAM and KMS, with normalised reports and mocked unit tests.</p><span>Python · Boto3 · IAM · Testing</span></article>
         </div>
       </article>
+      <article class="iac-project reveal">
+        <div class="iac-project-mark"><span>IaC</span><small>Terraform · AWS</small></div>
+        <div class="iac-project-copy">
+          <p class="case-label">Infrastructure as Code · Verified delivery</p>
+          <h2>Secure AWS network foundation.</h2>
+          <p>A reusable two-AZ AWS network built entirely with Terraform, including segmented subnets, isolated private routing, an S3 gateway endpoint and least-privilege security-group trust paths.</p>
+          <ul><li><b>23 resources</b><span>planned, deployed and verified</span></li><li><b>Zero exposed hosts</b><span>no automatic public IP assignment</span></li><li><b>Complete teardown</b><span>all resources destroyed and checked</span></li></ul>
+        </div>
+        <a class="button iac-button" href="https://github.com/JacquesOConnell/terraform-aws-secure-network" target="_blank" rel="noreferrer">View Terraform project <span>↗</span></a>
+      </article>
+      <div class="cloud-project-grid">
+        <article class="cloud-project-card serverless-card reveal">
+          <div class="cloud-project-topline"><span>Serverless</span><small>Terraform · AWS</small></div>
+          <p class="case-label">Full-stack cloud application</p>
+          <h2>Cloud incident tracker.</h2>
+          <p>A working incident-management application built with a private S3 frontend, CloudFront, API Gateway, Lambda and DynamoDB—provisioned and removed as one repeatable Terraform deployment.</p>
+          <ul><li><b>26 resources</b><span>deployed and verified</span></li><li><b>Full CRUD workflow</b><span>tested through the live API</span></li><li><b>Observable by design</b><span>API and Lambda logs captured</span></li></ul>
+          <div class="project-tech"><span>CloudFront</span><span>Lambda</span><span>API Gateway</span><span>DynamoDB</span></div>
+          <a class="button project-link" href="https://github.com/JacquesOConnell/terraform-aws-serverless-app" target="_blank" rel="noreferrer">Explore serverless project <span>↗</span></a>
+        </article>
+        <article class="cloud-project-card fargate-card reveal">
+          <div class="cloud-project-topline"><span>Containers</span><small>Docker · ECS Fargate</small></div>
+          <p class="case-label">Container platform engineering</p>
+          <h2>Fargate operations dashboard.</h2>
+          <p>A containerised Node.js service packaged with Docker, published to Amazon ECR and operated as a healthy ECS Fargate service with infrastructure, networking and logging defined in Terraform.</p>
+          <ul><li><b>Healthy service</b><span>task and container checks passed</span></li><li><b>Secure image flow</b><span>immutable ECR tag and image scan</span></li><li><b>Cost-conscious lab</b><span>deployed, evidenced and destroyed</span></li></ul>
+          <div class="project-tech"><span>Docker</span><span>Amazon ECR</span><span>ECS Fargate</span><span>CloudWatch</span></div>
+          <a class="button project-link" href="https://github.com/JacquesOConnell/terraform-aws-ecs-fargate-app" target="_blank" rel="noreferrer">Explore Fargate project <span>↗</span></a>
+        </article>
+      </div>
       <div class="github-profile reveal"><div><small>More engineering work</small><b>Explore the complete GitHub portfolio</b></div><a class="button outline" href="https://github.com/JacquesOConnell/" target="_blank" rel="noreferrer">View GitHub profile <span>↗</span></a></div>
     </section>
 
