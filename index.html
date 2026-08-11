@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ha-project.css">
 </head>
 <body id="top">
   <header class="site-header">
@@ -119,6 +120,32 @@
           <ul><li><b>23 resources</b><span>planned, deployed and verified</span></li><li><b>Zero exposed hosts</b><span>no automatic public IP assignment</span></li><li><b>Complete teardown</b><span>all resources destroyed and checked</span></li></ul>
         </div>
         <a class="button iac-button" href="https://github.com/JacquesOConnell/terraform-aws-secure-network" target="_blank" rel="noreferrer">View Terraform project <span>↗</span></a>
+      </article>
+      <article class="ha-project reveal">
+        <div class="ha-project-copy">
+          <div class="ha-project-topline"><span>Production-style AWS</span><small>Terraform · EC2 · CloudFront</small></div>
+          <p class="case-label">Highly available web platform</p>
+          <h2>From golden image to resilient edge delivery.</h2>
+          <p>The JNIT website was packaged into a tested EC2 Image Builder golden AMI and deployed across two Availability Zones behind an Application Load Balancer, Auto Scaling and CloudFront with a custom HTTPS domain.</p>
+          <div class="ha-project-results">
+            <span><b>65 resources</b>deployed and cleanly destroyed</span>
+            <span><b>2 Availability Zones</b>private Auto Scaling web tier</span>
+            <span><b>Recovery proven</b>failed instance replaced automatically</span>
+          </div>
+          <div class="project-tech"><span>EC2 Image Builder</span><span>Golden AMI</span><span>ALB</span><span>Auto Scaling</span><span>CloudFront</span><span>ACM</span><span>CloudWatch</span></div>
+          <a class="button ha-project-button" href="https://github.com/JacquesOConnell/terraform-aws-ha-web-platform" target="_blank" rel="noreferrer">Explore the full deployment <span>↗</span></a>
+        </div>
+        <div class="ha-architecture" aria-label="Highly available AWS architecture">
+          <div class="ha-node edge"><small>01 · Edge</small><b>CloudFront + ACM</b><span>HTTPS · caching · security headers</span></div>
+          <i>↓</i>
+          <div class="ha-node balance"><small>02 · Traffic</small><b>Application Load Balancer</b><span>restricted CloudFront origin</span></div>
+          <i>↓</i>
+          <div class="ha-az-grid">
+            <div class="ha-node"><small>AZ A</small><b>Private EC2</b><span>Nginx · CloudWatch Agent</span></div>
+            <div class="ha-node"><small>AZ B</small><b>Private EC2</b><span>Nginx · CloudWatch Agent</span></div>
+          </div>
+          <div class="ha-status"><span></span><b>Resilience tested</b><small>Auto Scaling restored capacity</small></div>
+        </div>
       </article>
       <div class="cloud-project-grid">
         <article class="cloud-project-card serverless-card reveal">
