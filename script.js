@@ -36,7 +36,7 @@ const assessmentForm = document.querySelector('#assessment-form');
 const formError = document.querySelector('#form-error');
 const resultsSection = document.querySelector('#results');
 
-questionsContainer.innerHTML = questions.map((question, index) => `
+if (questionsContainer) questionsContainer.innerHTML = questions.map((question, index) => `
   <fieldset class="question-card">
     <legend><span>${String(index + 1).padStart(2, '0')}</span>${question[0]}</legend>
     <p>${question[1]}</p>
@@ -45,7 +45,7 @@ questionsContainer.innerHTML = questions.map((question, index) => `
     </div>
   </fieldset>`).join('');
 
-assessmentForm.addEventListener('change', () => {
+assessmentForm?.addEventListener('change', () => {
   document.querySelector('#answered-count').textContent = assessmentForm.querySelectorAll('input:checked').length;
 });
 
@@ -57,7 +57,7 @@ function maturityMessage(maturity) {
   }[maturity];
 }
 
-assessmentForm.addEventListener('submit', (event) => {
+assessmentForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   const answers = questions.map((_, index) => assessmentForm.querySelector(`input[name="question-${index}"]:checked`)?.value).map(Number);
   if (answers.some((answer) => !answer)) {
@@ -79,8 +79,8 @@ assessmentForm.addEventListener('submit', (event) => {
   resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
-document.querySelector('#print-result').addEventListener('click', () => window.print());
-document.querySelector('#restart-assessment').addEventListener('click', () => {
+document.querySelector('#print-result')?.addEventListener('click', () => window.print());
+document.querySelector('#restart-assessment')?.addEventListener('click', () => {
   assessmentForm.reset();
   formError.textContent = '';
   document.querySelector('#answered-count').textContent = '0';
@@ -92,4 +92,5 @@ const observer = new IntersectionObserver((entries) => entries.forEach((entry) =
   if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
 }), { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-document.querySelector('#year').textContent = new Date().getFullYear();
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
