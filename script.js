@@ -36,6 +36,38 @@ const assessmentForm = document.querySelector('#assessment-form');
 const formError = document.querySelector('#form-error');
 const resultsSection = document.querySelector('#results');
 
+const toolSearch = document.querySelector('#tool-search');
+const statusFilter = document.querySelector('#status-filter');
+const toolCards = [...document.querySelectorAll('.tool-card')];
+let activeCategory = 'all';
+
+function filterTools() {
+  const query = toolSearch?.value.trim().toLowerCase() || '';
+  const status = statusFilter?.value || 'all';
+  let visible = 0;
+  toolCards.forEach((card) => {
+    const categoryMatch = activeCategory === 'all' || card.dataset.category.includes(activeCategory);
+    const statusMatch = status === 'all' || card.dataset.status === status;
+    const searchMatch = !query || card.textContent.toLowerCase().includes(query);
+    card.hidden = !(categoryMatch && statusMatch && searchMatch);
+    if (!card.hidden) visible += 1;
+  });
+  const count = document.querySelector('#tool-count');
+  if (count) count.textContent = `${visible} ${visible === 1 ? 'tool' : 'tools'} shown`;
+  const empty = document.querySelector('#no-tools');
+  if (empty) empty.hidden = visible !== 0;
+}
+
+toolSearch?.addEventListener('input', filterTools);
+statusFilter?.addEventListener('change', filterTools);
+document.querySelectorAll('.filter-chip').forEach((button) => button.addEventListener('click', () => {
+  document.querySelector('.filter-chip.active')?.classList.remove('active');
+  button.classList.add('active');
+  activeCategory = button.dataset.filter;
+  filterTools();
+}));
+if (toolCards.length) filterTools();
+
 if (questionsContainer) questionsContainer.innerHTML = questions.map((question, index) => `
   <fieldset class="question-card">
     <legend><span>${String(index + 1).padStart(2, '0')}</span>${question[0]}</legend>
