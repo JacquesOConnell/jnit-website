@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRVRZRCNWW"></script>
+    <script src="site-metrics.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>JNIT CloudOps | AWS Cloud Engineering Case Study</title>
+
+    <meta
+        name="description"
+        content="JNIT CloudOps is an AWS cloud operations and observability platform built with ECS Fargate, Terraform, GitHub Actions, CloudWatch and FastAPI."
+    >
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a class="brand" href="index.html">
+        <img src="assets/jnit-icon.png" alt="JNIT">
+
+        <span>
+            <strong>JNIT</strong>
+            <small>Cloud Solutions</small>
+        </span>
+    </a>
+
+    <button
+        class="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navigation"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+        <b>Menu</b>
+    </button>
+
+    <nav id="navigation">
+        <a href="services.html">Services</a>
+        <a href="applications.html">Applications</a>
+        <a href="tools.html">Tools</a>
+        <a href="store.html">Store</a>
+        <a class="active" href="work.html">Our work</a>
+        <a href="mailto:jacques@jnit.co.za" class="nav-cta">Let's talk</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="page-hero cloudops-hero">
+
+        <p class="eyebrow">
+            <span></span>
+            AWS CLOUD ENGINEERING CASE STUDY
+        </p>
+
+        <h1>
+            JNIT CloudOps.<br>
+            <em>Operate AWS with visibility.</em>
+        </h1>
+
+        <p>
+            A cloud operations and observability platform designed, built and
+            deployed on AWS using Terraform, ECS Fargate, GitHub Actions,
+            CloudWatch and FastAPI.
+        </p>
+
+        <div class="cloudops-hero-actions">
+            <a class="button primary" href="#platform">
+                Explore the platform ↓
+            </a>
+
+            <a class="button outline" href="#engineering">
+                View engineering
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT SUMMARY -->
+
+    <section class="section cloudops-summary">
+
+        <div class="section-heading reveal">
+
+            <div>
+                <p class="eyebrow">
+                    <span></span>
+                    PROJECT OVERVIEW
+                </p>
+
+                <h2>
+                    More than a dashboard.
+                </h2>
+            </div>
+
+            <p>
+                JNIT CloudOps was created as a practical cloud engineering
+                project built around a real containerised AWS workload.
+                The platform retrieves operational information directly from
+                AWS APIs rather than displaying simulated infrastructure data.
+            </p>
+
+        </div>
+
+        <div class="cloudops-facts">
+
+            <article>
+                <small>Cloud</small>
+                <strong>AWS</strong>
+                <span>Africa (Cape Town)</span>
+            </article>
+
+            <article>
+                <small>Compute</small>
+                <strong>ECS Fargate</strong>
+                <span>Private workload</span>
+            </article>
+
+            <article>
+                <small>Infrastructure</small>
+                <strong>Terraform</strong>
+                <span>Modular IaC</span>
+            </article>
+
+            <article>
+                <small>Delivery</small>
+                <strong>GitHub Actions</strong>
+                <span>OIDC CI/CD</span>
+            </article>
+
+            <article>
+                <small>Observability</small>
+                <strong>CloudWatch</strong>
+                <span>Metrics, logs & alarms</span>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- HERO SCREENSHOT -->
+
+    <section class="section cloudops-showcase" id="platform">
+
+        <div class="cloudops-shot-heading">
+
+            <div>
+                <p class="eyebrow">
+                    <span></span>
+                    OPERATIONS PLATFORM
+                </p>
+
+                <h2>
+                    AWS infrastructure made visible.
+                </h2>
+            </div>
+
+            <p>
+                The dashboard provides a single operational view across
+                infrastructure, workloads, deployments, security,
+                monitoring and cost information.
+            </p>
+
+        </div>
+
+        <figure class="cloudops-feature-image">
+            <img
+                src="images/cloudops/monitoring-live.png"
+                alt="JNIT CloudOps CloudWatch monitoring dashboard"
+            >
+
+            <figcaption>
+                Live ECS and Application Load Balancer CloudWatch metrics.
+            </figcaption>
+        </figure>
+
+    </section>
+
+
+    <!-- CAPABILITIES -->
+
+    <section class="section cloudops-capabilities">
+
+        <div class="section-heading reveal">
+
+            <div>
+                <p class="eyebrow">
+                    <span></span>
+                    PLATFORM CAPABILITIES
+                </p>
+
+                <h2>
+                    One view across the environment.
+                </h2>
+            </div>
+
+            <p>
+                Each section retrieves information from AWS services through
+                a FastAPI backend using boto3.
+            </p>
+
+        </div>
+
+        <div class="cloudops-capability-grid">
+
+            <article>
+                <span>01</span>
+                <h3>Resource discovery</h3>
+                <p>
+                    ECS clusters and services, ALB state, ECR images,
+                    S3 resources, VPCs, subnets and security groups.
+                </p>
+            </article>
+
+            <article>
+                <span>02</span>
+                <h3>Monitoring</h3>
+                <p>
+                    ECS CPU and memory utilisation together with ALB traffic,
+                    response latency and target health metrics.
+                </p>
+            </article>
+
+            <article>
+                <span>03</span>
+                <h3>CloudWatch Logs</h3>
+                <p>
+                    Recent application events surfaced from the ECS log group
+                    with repetitive load-balancer health checks filtered
+                    from the dashboard view.
+                </p>
+            </article>
+
+            <article>
+                <span>04</span>
+                <h3>Deployments</h3>
+                <p>
+                    ECS task-definition revisions, running workloads,
+                    rollout state and deployment events.
+                </p>
+            </article>
+
+            <article>
+                <span>05</span>
+                <h3>Alerts</h3>
+                <p>
+                    Real CloudWatch alarm configuration and state for
+                    workload and target-health conditions.
+                </p>
+            </article>
+
+            <article>
+                <span>06</span>
+                <h3>Security posture</h3>
+                <p>
+                    Network exposure checks confirm ALB entry,
+                    private ECS access, HTTPS and HTTP redirection.
+                </p>
+            </article>
+
+            <article>
+                <span>07</span>
+                <h3>Cost visibility</h3>
+                <p>
+                    AWS Cost Explorer integration presents service usage,
+                    credits and estimated net cloud cost.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREENSHOTS -->
+
+    <section class="section cloudops-gallery">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="eyebrow">
+                    <span></span>
+                    PLATFORM EVIDENCE
+                </p>
+
+                <h2>
+                    Built against live AWS services.
+                </h2>
+            </div>
+
+            <p>
+                Screenshots were captured from the deployed development
+                environment before the runtime infrastructure was
+                intentionally destroyed for cost control.
+            </p>
+
+        </div>
+
+        <div class="cloudops-gallery-grid">
+
+            <figure>
+                <img
+                    src="images/cloudops/resources-live.png"
+                    alt="JNIT CloudOps AWS resource discovery"
+                >
+                <figcaption>
+                    <strong>AWS Resources</strong>
+                    <span>Live infrastructure and service inventory.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/cloudops/security-live.png"
+                    alt="JNIT CloudOps security controls"
+                >
+                <figcaption>
+                    <strong>Security</strong>
+                    <span>Five AWS configuration checks passed.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/cloudops/deployments-live.png"
+                    alt="JNIT CloudOps ECS deployments"
+                >
+                <figcaption>
+                    <strong>Deployments</strong>
+                    <span>ECS rollout and task-definition history.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/cloudops/alerts-live.png"
+                    alt="JNIT CloudOps CloudWatch alarms"
+                >
+                <figcaption>
+                    <strong>CloudWatch Alerts</strong>
+                    <span>Real alarm configuration and state.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/cloudops/logs-live.png"
+                    alt="JNIT CloudOps CloudWatch logs"
+                >
+                <figcaption>
+                    <strong>CloudWatch Logs</strong>
+                    <span>Application activity from ECS.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/cloudops/costs-demo.png"
+                    alt="JNIT CloudOps cost dashboard"
+                >
+                <figcaption>
+                    <strong>Cost Visibility</strong>
+                    <span>Portfolio demonstration of Cost Explorer data.</span>
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </section>
+
+
+    <!-- ENGINEERING -->
+
+    <section class="cloudops-engineering" id="engineering">
+
+        <div class="section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow light">
+                        <span></span>
+                        ENGINEERING
+                    </p>
+
+                    <h2>
+                        Infrastructure, application and delivery.
+                    </h2>
+                </div>
+
+                <p>
+                    CloudOps combines application development with
+                    infrastructure engineering and operational automation.
+                </p>
+
+            </div>
+
+
+            <div class="cloudops-engineering-grid">
+
+                <article>
+
+                    <small>INFRASTRUCTURE AS CODE</small>
+
+                    <h3>Terraform</h3>
+
+                    <p>
+                        The AWS environment is defined using reusable
+                        Terraform modules with environment separation
+                        and remote state.
+                    </p>
+
+                    <ul>
+                        <li>VPC and subnet architecture</li>
+                        <li>Security groups</li>
+                        <li>Application Load Balancer</li>
+                        <li>ECS Fargate</li>
+                        <li>ECR</li>
+                        <li>IAM roles and policies</li>
+                        <li>CloudWatch monitoring</li>
+                        <li>ACM and HTTPS</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <small>CONTINUOUS DELIVERY</small>
+
+                    <h3>GitHub Actions</h3>
+
+                    <p>
+                        Application delivery uses GitHub Actions with AWS
+                        OIDC federation rather than long-lived AWS access
+                        keys.
+                    </p>
+
+                    <ul>
+                        <li>Automated Pytest execution</li>
+                        <li>Docker image build</li>
+                        <li>ECR image push</li>
+                        <li>ECS task-definition revision</li>
+                        <li>ECS rolling deployment</li>
+                        <li>Service stability validation</li>
+                    </ul>
+
+                </article>
+
+
+                <article>
+
+                    <small>APPLICATION</small>
+
+                    <h3>FastAPI + boto3</h3>
+
+                    <p>
+                        A Python API layer retrieves operational information
+                        directly from AWS and exposes it to the CloudOps
+                        dashboard.
+                    </p>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>FastAPI</li>
+                        <li>boto3</li>
+                        <li>REST APIs</li>
+                        <li>JavaScript</li>
+                        <li>Chart.js</li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DELIVERY EVIDENCE -->
+
+    <section class="section cloudops-delivery">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="eyebrow">
+                    <span></span>
+                    DEPLOYMENT EVIDENCE
+                </p>
+
+                <h2>
+                    From Git commit to running workload.
+                </h2>
+            </div>
+
+            <p>
+                The application was containerised, delivered through
+                CI/CD and validated against live AWS infrastructure.
+            </p>
+
+        </div>
+
+        <div class="cloudops-evidence-grid">
+
+            <figure>
+                <img
+                    src="images/cloudops/pipeline-success.png"
+                    alt="Successful JNIT CloudOps GitHub Actions deployment"
+                >
+
+                <figcaption>
+                    <strong>GitHub Actions CI/CD</strong>
+                    <span>
+                        Tests, Docker build, ECR push and ECS deployment.
+                    </span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/cloudops/service-running.png"
+                    alt="JNIT CloudOps ECS Fargate service running"
+                >
+
+                <figcaption>
+                    <strong>ECS Fargate</strong>
+                    <span>
+                        Active service with a running Fargate task.
+                    </span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="images/cloudops/healthy-target.png"
+                    alt="JNIT CloudOps healthy Application Load Balancer target"
+                >
+
+                <figcaption>
+                    <strong>Application Load Balancer</strong>
+                    <span>
+                        ECS target registered and healthy on port 8000.
+                    </span>
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARCHITECTURE -->
+
+    <section class="section cloudops-architecture">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="eyebrow">
+                    <span></span>
+                    AWS ARCHITECTURE
+                </p>
+
+                <h2>
+                    Public edge. Private workload.
+                </h2>
+            </div>
+
+            <p>
+                Internet traffic terminates at the Application Load Balancer.
+                ECS Fargate runs inside private subnets and accepts
+                application traffic only from the ALB security group.
+            </p>
+
+        </div>
+
+
+        <div class="cloudops-architecture-flow">
+
+            <div>
+                <small>PUBLIC</small>
+                <strong>Internet</strong>
+            </div>
+
+            <span>→</span>
+
+            <div>
+                <small>DNS</small>
+                <strong>Route 53</strong>
+            </div>
+
+            <span>→</span>
+
+            <div>
+                <small>HTTPS :443</small>
+                <strong>Application Load Balancer</strong>
+            </div>
+
+            <span>→</span>
+
+            <div>
+                <small>PRIVATE :8000</small>
+                <strong>ECS Fargate</strong>
+            </div>
+
+        </div>
+
+
+        <div class="cloudops-tech-list">
+
+            <span>AWS</span>
+            <span>Terraform</span>
+            <span>ECS</span>
+            <span>Fargate</span>
+            <span>ECR</span>
+            <span>ALB</span>
+            <span>VPC</span>
+            <span>IAM</span>
+            <span>CloudWatch</span>
+            <span>Route 53</span>
+            <span>ACM</span>
+            <span>GitHub Actions</span>
+            <span>Docker</span>
+            <span>FastAPI</span>
+            <span>Python</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- SECURITY -->
+
+    <section class="section cloudops-security">
+
+        <div class="cloudops-security-copy">
+
+            <p class="eyebrow">
+                <span></span>
+                SECURITY DESIGN
+            </p>
+
+            <h2>
+                Security built into the architecture.
+            </h2>
+
+            <p>
+                The workload is not directly exposed to the public internet.
+                Network access is enforced through security-group
+                relationships and HTTPS terminates at the ALB.
+            </p>
+
+        </div>
+
+
+        <div class="cloudops-checks">
+
+            <article>
+                <span>✓</span>
+                <div>
+                    <strong>ALB is the public entry point</strong>
+                    <p>Public traffic does not connect directly to ECS.</p>
+                </div>
+            </article>
+
+            <article>
+                <span>✓</span>
+                <div>
+                    <strong>ECS has no direct public ingress</strong>
+                    <p>The application workload remains private.</p>
+                </div>
+            </article>
+
+            <article>
+                <span>✓</span>
+                <div>
+                    <strong>Security-group restricted access</strong>
+                    <p>ECS accepts application traffic from the ALB SG.</p>
+                </div>
+            </article>
+
+            <article>
+                <span>✓</span>
+                <div>
+                    <strong>HTTPS enabled</strong>
+                    <p>ACM-backed HTTPS listener operates on port 443.</p>
+                </div>
+            </article>
+
+            <article>
+                <span>✓</span>
+                <div>
+                    <strong>HTTP redirects to HTTPS</strong>
+                    <p>Port 80 requests are redirected securely.</p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- COST MANAGEMENT -->
+
+    <section class="section cloudops-lifecycle">
+
+        <div>
+
+            <p class="eyebrow">
+                <span></span>
+                CLOUD COST MANAGEMENT
+            </p>
+
+            <h2>
+                Rebuild when needed.<br>
+                Destroy when idle.
+            </h2>
+
+        </div>
+
+        <div>
+
+            <p>
+                JNIT CloudOps is a portfolio and engineering environment,
+                so the AWS runtime is not left running continuously.
+            </p>
+
+            <p>
+                After deployment validation and evidence capture, the
+                development environment was intentionally destroyed using
+                Terraform to prevent unnecessary cloud charges.
+            </p>
+
+            <p>
+                The infrastructure remains reproducible from Infrastructure
+                as Code and can be recreated when additional development
+                or demonstration work is required.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="section cloudops-cta">
+
+        <p class="eyebrow light">
+            <span></span>
+            CLOUD ENGINEERING
+        </p>
+
+        <h2>
+            Need practical AWS engineering?
+        </h2>
+
+        <p>
+            JNIT combines infrastructure design, automation, application
+            development and operational visibility into maintainable
+            cloud solutions.
+        </p>
+
+        <a
+            class="button primary"
+            href="mailto:jacques@jnit.co.za?subject=JNIT CloudOps / AWS Engineering"
+        >
+            Start a conversation →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <a href="index.html">
+        JNIT Cloud Solutions
+    </a>
+
+    <p>
+        Cloud engineering backed by working evidence.
+    </p>
+
+    <div>
+        <a href="services.html">Services</a>
+        <a href="applications.html">Applications</a>
+        <a href="tools.html">Tools</a>
+        <a href="store.html">Store</a>
+        <a href="work.html">Our work</a>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
