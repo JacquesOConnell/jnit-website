@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 260">
+<rect width="900" height="260" fill="#081B3D"/><g transform="translate(10 5)"><path d="M65 88 C69 55 95 33 128 33 C155 33 178 48 188 72 C217 73 238 94 238 122 C238 152 214 174 183 174 H73 C39 174 18 151 18 121 C18 96 37 76 65 88 Z" fill="#FFFFFF"/>
+      <path d="M76 174 V204 H51 V226 M128 174 V226 M180 174 V204 H205 V226" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="51" cy="231" r="7" fill="#FFFFFF"/><circle cx="128" cy="231" r="7" fill="#FFFFFF"/><circle cx="205" cy="231" r="7" fill="#FFFFFF"/>
+    </g>
+<text x="292" y="128" font-family="Arial, Helvetica, sans-serif" font-size="105" font-weight="800" letter-spacing="5" fill="#FFFFFF">JNIT</text>
+<text x="298" y="181" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" letter-spacing="6" fill="#D6E4FF">CLOUD SOLUTIONS</text>
+</svg>

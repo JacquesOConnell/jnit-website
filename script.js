@@ -21,7 +21,7 @@ if (navigation && !navigation.querySelector('a[href="web-development.html"]')) {
 const navCta = navigation?.querySelector('.nav-cta');
 if (navCta) {
   navCta.href = 'quote.html';
-  navCta.textContent = 'Get a quote';
+  navCta.textContent = 'Discuss your project ↗';
 }
 
 menuButton?.addEventListener('click', () => {
@@ -149,3 +149,10 @@ const observer = new IntersectionObserver((entries) => entries.forEach((entry) =
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
+
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && navigation?.classList.contains('open')) { navigation.classList.remove('open'); menuButton?.setAttribute('aria-expanded', 'false'); menuButton?.focus(); } });
+
+if (document.body.classList.contains('cloud-home')) {
+  const legacySection = { '#demos': 'demos', '#websites': 'packages' }[window.location.hash];
+  if (legacySection) window.location.replace('web-development.html#' + legacySection);
+}

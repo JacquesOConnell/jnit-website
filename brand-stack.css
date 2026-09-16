@@ -1,0 +1,147 @@
+/* One proportional logo treatment for all main JNIT pages. */
+.premium-site .site-header{
+ height:166px!important;background:#061526;
+}
+.premium-site .site-header .stacked-brand,
+.premium-site .premium-footer .stacked-brand{
+ display:flex!important;align-items:center;justify-content:center;
+ padding:0!important;margin:0;background:transparent!important;
+ border:0!important;box-shadow:none;gap:0!important;text-decoration:none;
+}
+.premium-site .site-header .stacked-brand{
+ width:330px!important;max-width:38%;height:auto!important;flex-shrink:0;
+}
+.premium-site .stacked-brand .approved-brand-image{
+ display:block;width:100%!important;height:auto!important;max-height:none!important;
+ aspect-ratio:auto;object-fit:contain!important;object-position:center!important;
+ mix-blend-mode:normal;
+ mask-image:none;
+ 
+}
+.premium-site .premium-footer .stacked-brand{
+ width:360px!important;max-width:100%;height:auto!important;align-self:flex-start;
+}
+.showcase-home .showcase-hero{padding-top:225px}
+@media(max-width:1100px) and (min-width:851px){
+ .premium-site .site-header{padding-inline:4vw}
+ .premium-site .site-header .stacked-brand{width:290px!important;max-width:32%}
+ .premium-site #navigation{gap:18px}
+}
+@media(max-width:850px){
+ .premium-site .site-header{height:148px!important;padding-inline:5vw}
+ .premium-site .site-header .stacked-brand{width:290px!important;max-width:calc(100% - 60px)}
+ .premium-site .site-header #navigation{top:148px!important}
+ .showcase-home .showcase-hero{padding-top:195px}
+}
+@media(max-width:390px){
+ .premium-site .site-header{height:132px!important}
+ .premium-site .site-header #navigation{top:132px!important}
+ .showcase-home .showcase-hero{padding-top:178px}
+}
+/* A live-text tagline stays sharp and legible at every screen size. */
+.premium-site .stacked-brand .brand-art{
+ display:block!important;position:relative;width:100%;aspect-ratio:1884 / 710;
+ overflow:hidden;flex:none;border:0!important;padding:0!important;margin:0!important;
+}
+.premium-site .stacked-brand .brand-art .approved-brand-image{
+ position:absolute;inset:0 auto auto 0;width:100%!important;height:auto!important;
+}
+.premium-site .stacked-brand .readable-tagline{
+ display:block!important;width:100%;max-width:310px;
+ color:#008cff!important;font:600 14px/1.45 "DM Sans",sans-serif!important;
+ letter-spacing:.01em!important;text-align:center;text-transform:none!important;
+ white-space:normal!important;border:0!important;padding:0!important;margin:6px 0 0!important;
+}
+.premium-site .site-header .stacked-brand,
+.premium-site .premium-footer .stacked-brand{flex-direction:column}
+.premium-site .site-header{height:184px!important}
+.premium-site .premium-footer .stacked-brand .readable-tagline{font-size:16px!important;max-width:340px}
+.showcase-home .showcase-hero{padding-top:245px}
+@media(max-width:850px){
+ .premium-site .site-header{height:174px!important}
+ .premium-site .site-header #navigation{top:174px!important}
+ .showcase-home .showcase-hero{padding-top:220px}
+}
+@media(max-width:390px){
+ .premium-site .site-header{height:158px!important}
+ .premium-site .site-header #navigation{top:158px!important}
+ .showcase-home .showcase-hero{padding-top:205px}
+}
+/* The brand statement is independent of the logo, with its own space. */
+.premium-site .site-header{height:152px!important}
+.premium-site .site-header .stacked-brand{width:270px!important}
+.premium-site .site-header #navigation{margin-top:-30px}
+.premium-site .site-header .header-brand-statement{
+ position:absolute;right:5vw;bottom:18px;margin:0;
+ color:#008cff;font:500 18px/1.4 "DM Sans",sans-serif;
+ letter-spacing:.015em;text-align:right;
+}
+.premium-site .premium-footer .footer-brand-statement{
+ display:block;max-width:none;margin:36px 0 28px;padding:24px 0 0;
+ border-top:1px solid #ffffff20;color:#008cff;
+ font:500 clamp(21px,2.3vw,30px)/1.4 "DM Sans",sans-serif;
+ letter-spacing:0;text-align:left;
+}
+.showcase-home .showcase-hero{padding-top:215px}
+@media(max-width:1100px) and (min-width:851px){
+ .premium-site .site-header .stacked-brand{width:235px!important}
+ .premium-site .site-header .header-brand-statement{font-size:17px}
+}
+@media(max-width:850px){
+ .premium-site .site-header{height:180px!important;align-items:flex-start;padding-top:10px!important}
+ .premium-site .site-header .stacked-brand{width:225px!important}
+ .premium-site .site-header .menu-button{margin-top:27px}
+ .premium-site .site-header .header-brand-statement{
+  left:5vw;right:5vw;bottom:15px;padding-top:12px;border-top:1px solid #ffffff20;
+  text-align:center;font-size:16px;line-height:1.4;
+ }
+ .premium-site .site-header #navigation{top:180px!important;margin-top:0}
+ .showcase-home .showcase-hero{padding-top:230px}
+}
+/* Navigation has one job; the homepage carries the brand promise. */
+.premium-site .site-header{height:126px!important;align-items:center;padding-top:0!important}
+.premium-site .site-header #navigation{margin-top:0}
+.premium-site .site-header .menu-button{margin-top:0}
+.showcase-home .showcase-hero{
+ display:flex;flex-direction:column;gap:0;min-height:0;padding:185px 5vw 70px;
+}
+.showcase-home .showcase-hero-copy{width:100%;max-width:960px;text-align:center;padding-bottom:0}
+.showcase-home .showcase-label{max-width:680px;margin:0 auto}
+.showcase-home .showcase-hero h1{
+ font-size:40px;line-height:1.2;letter-spacing:-.035em;margin:36px auto 22px;
+}
+.showcase-home .showcase-hero h1 em{color:#008cff}
+.showcase-home .showcase-lead{max-width:680px;margin:0 auto;font-size:19px}
+.showcase-home .showcase-actions{justify-content:center;margin-top:28px}
+.showcase-home .hero-proof{margin:38px auto 0;text-align:left}
+.showcase-home .hero-product{width:min(100%,1000px);min-height:620px;margin:30px auto 0}
+.showcase-home .product-window{width:92%;right:4%;top:7%}
+.showcase-home .float-card.pipeline{left:0;top:3%}
+.showcase-home .float-card.health{right:0;bottom:9%}
+.showcase-home .product-badge{left:4%;bottom:4%}
+.showcase-home .hero-scroll{display:none}
+@media(max-width:850px){
+ .premium-site .site-header{height:108px!important}
+ .premium-site .site-header #navigation{top:108px!important}
+ .showcase-home .showcase-hero{padding:155px 6vw 55px}
+ .showcase-home .hero-product{min-height:500px}
+}
+@media(max-width:540px){
+ .showcase-home .showcase-hero h1{font-size:34px}
+ .showcase-home .showcase-hero h1 br{display:none}
+ .showcase-home .showcase-lead{font-size:17px}
+ .showcase-home .showcase-actions{align-items:center}
+ .showcase-home .hero-product{min-height:345px}
+ .showcase-home .product-window{width:100%;right:0;top:60px}
+ .showcase-home .product-badge{bottom:0;left:auto;right:0}
+}
+/* Quiet footer: a proportionate logo, useful links, and a single baseline. */
+.premium-site .premium-footer .stacked-brand{width:280px!important;max-width:100%}
+.premium-site .premium-footer{padding-top:44px}
+.premium-site .premium-footer .footer-columns{padding-top:24px;padding-bottom:36px;align-items:start}
+@media(max-width:540px){
+ .premium-site .premium-footer .stacked-brand{width:245px!important}
+ .premium-site .premium-footer .footer-columns{gap:30px}
+ .premium-site .premium-footer .footer-baseline{padding-right:65px}
+}
+@media(min-width:541px){.premium-site .premium-footer .footer-baseline{padding-right:145px}}
