@@ -185,3 +185,61 @@
  .showcase-home .hero-proof{grid-template-columns:1fr 1fr;gap:18px;margin:0}
  .showcase-home .hero-proof>div:last-child{grid-column:1/-1}
 }
+
+/* Readability pass: keep supporting copy compact without making it hard to read. */
+.premium-site .eyebrow,
+.premium-site .showcase-kicker,
+.premium-site .case-label,
+.premium-site .status,
+.premium-site .package-label,
+.premium-site .panel-tag{
+ font-size:12px!important;line-height:1.65;letter-spacing:.1em;
+}
+.showcase-home .showcase-label{font-size:12px!important;line-height:1.65;letter-spacing:.08em}
+.showcase-home .window-bar{font-size:11px}
+.showcase-home .float-card span,
+.showcase-home .float-card small,
+.showcase-home .product-badge span{font-size:11px}
+.showcase-home .hero-proof span,
+.showcase-home .panel-copy small,
+.showcase-home .concept-card span,
+.showcase-home .concept-card b,
+.showcase-home .approach-section li>b{font-size:12px}
+.showcase-home .signal-strip{font-size:13px}
+.premium-site small{font-size:13px;line-height:1.55}
+.premium-site figcaption,
+.premium-site .pricing-note,
+.premium-site .portfolio-disclosure{font-size:13px!important;line-height:1.65}
+.premium-site article>span:not([aria-hidden="true"]){font-size:12px;line-height:1.55}
+.premium-site .cloudops-tech-list span,
+.premium-site .cloudops-case li,
+.premium-site .cloudops-case figcaption span{font-size:12px;line-height:1.55}
+.premium-site .footer-invite>p,
+.premium-site .footer-baseline span,
+.premium-site .premium-footer small{font-size:13px!important;line-height:1.55}
+.premium-site .whatsapp-contact span,
+.premium-site .whatsapp-contact b{font-size:13px}
+.web-service-page .popular,
+.web-service-page .price small,
+.web-service-page .price span{font-size:12px!important}
+.showcase-home .window-bar,
+.showcase-home .window-bar b,
+.showcase-home .window-bar em,
+.showcase-home .float-card span,
+.showcase-home .float-card small,
+.showcase-home .product-badge span,
+.showcase-home .feature-copy>span,
+.showcase-home .build-preview>div>span{font-size:12px!important}
+.premium-site .lifewallet-work-copy>span,
+.premium-site .work-grid-secondary article>span{font-size:12px!important;line-height:1.55}
+.premium-site .cloudops-gallery-grid figcaption span{font-size:12px!important;line-height:1.55}
+.premium-site .cloudops-evidence-grid figcaption span{font-size:12px!important;line-height:1.55}
+.premium-site .store-category-visual>span{font-size:12px!important;line-height:1.55}
+
+@media(max-width:540px){
+ .premium-site .eyebrow,
+ .premium-site .showcase-kicker,
+ .premium-site .case-label,
+ .premium-site .status,
+ .premium-site .package-label{font-size:12px!important}
+}

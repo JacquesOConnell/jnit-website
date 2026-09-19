@@ -105,3 +105,20 @@
 .build-preview:hover,.build-preview:focus-visible{border-color:#80aaff}
 @media(max-width:850px){.showcase-home .work-stage{padding:65px 6vw}.showcase-home .feature-project{grid-template-columns:1fr;gap:32px}.showcase-home .feature-copy{max-width:600px}.showcase-home .stage-heading{align-items:start;flex-direction:column;margin-bottom:36px}}
 @media(max-width:540px){.build-preview>div{padding:12px;font-size:9px}.showcase-home .stage-heading h2{font-size:39px}}
+
+/* A compact hand-off between the hero and the service panels. */
+.showcase-home .showcase-intro{display:grid;grid-template-columns:190px minmax(0,1fr);gap:52px;padding:94px max(5vw,40px) 82px}
+.showcase-home .showcase-intro>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.42fr);gap:clamp(42px,5vw,92px);align-items:center;max-width:1240px}
+.showcase-home .showcase-intro h2{font-size:clamp(48px,5.2vw,78px);line-height:1.01;letter-spacing:-.06em;max-width:760px}
+.showcase-home .showcase-intro>div>p{max-width:390px;padding:0 0 2px;font-size:18px;line-height:1.65;color:#43546a}
+.showcase-home .showcase-intro .showcase-kicker{margin:12px 0 0;white-space:nowrap}
+@media(max-width:1100px){.showcase-home .showcase-intro{grid-template-columns:1fr;gap:14px}.showcase-home .showcase-intro>div{max-width:100%;grid-template-columns:minmax(0,1.15fr) minmax(260px,.55fr)}}
+@media(max-width:700px){.showcase-home .showcase-intro{padding:70px 6vw 60px}.showcase-home .showcase-intro>div{grid-template-columns:1fr;gap:22px}.showcase-home .showcase-intro h2{font-size:clamp(42px,11vw,58px)}.showcase-home .showcase-intro>div>p{font-size:16px;max-width:560px}.showcase-home .showcase-intro .showcase-kicker{margin:0}}
+
+/* Homepage introduction: one compact thought leading straight into the services. */
+.showcase-home .showcase-intro{display:block;padding:72px 5vw 68px}
+.showcase-home .showcase-intro .showcase-kicker{margin:0 0 16px}
+.showcase-home .showcase-intro>div{display:flex;align-items:center;gap:clamp(38px,6vw,108px);max-width:1220px}
+.showcase-home .showcase-intro h2{flex:1 1 720px;font-size:clamp(46px,4.6vw,70px);line-height:1.03;max-width:740px}
+.showcase-home .showcase-intro>div>p{flex:0 1 350px;max-width:350px;padding:0;font-size:17px;line-height:1.65;color:#43546a}
+@media(max-width:850px){.showcase-home .showcase-intro{padding:66px 6vw 58px}.showcase-home .showcase-intro>div{display:block}.showcase-home .showcase-intro>div>p{max-width:590px;margin-top:22px}}
