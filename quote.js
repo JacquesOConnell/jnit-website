@@ -5,8 +5,15 @@ const packages = {
   business: 'Professional business website',
   commerce: 'Online store'
 };
-const services = { cloud: 'Cloud infrastructure or migration', devops: 'DevOps or business automation', operations: 'Cloud infrastructure or migration', care: 'Hosting and website maintenance', it: 'Microsoft 365, security or IT consulting' };
+const services = { cloud: 'Cloud foundation for a client product developed or deployed by JNIT', devops: 'DevOps or business automation', operations: 'Cloud operations for a client product developed or deployed by JNIT', care: 'Hosting and website maintenance' };
 const params = new URLSearchParams(window.location.search);
+const cloudChoice = briefForm?.querySelector('input[value="Cloud infrastructure or migration"]')?.closest('label');
+if (cloudChoice) {
+  const input = cloudChoice.querySelector('input');
+  input.value = services.cloud;
+  cloudChoice.querySelector('span').innerHTML = 'Cloud foundation<small>For a product JNIT develops or deploys</small>';
+}
+briefForm?.querySelector('input[value="Microsoft 365, security or IT consulting"]')?.closest('label')?.remove();
 const selectedPackage = packages[params.get('package')] || services[params.get('service')];
 if (selectedPackage && briefForm) {
   [...briefForm.querySelectorAll('input[name="project"]')].forEach(input => {

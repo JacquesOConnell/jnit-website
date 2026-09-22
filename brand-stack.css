@@ -243,3 +243,9 @@
  .premium-site .status,
  .premium-site .package-label{font-size:12px!important}
 }
+
+/* The public offer focuses on cloud, delivery and digital product work. */
+.additional-services .additional-grid>article:nth-child(4),
+.quote-form-wrap .choice-grid label:has(input[value="Microsoft 365, security or IT consulting"]),
+.tool-directory .tool-card[href="quick-tool.html#support-cost"],
+.tool-directory .tool-card[href="migration-effort-estimator.html"]{display:none!important}

@@ -61,7 +61,8 @@ const resultsSection = document.querySelector('#results');
 
 const toolSearch = document.querySelector('#tool-search');
 const statusFilter = document.querySelector('#status-filter');
-const toolCards = [...document.querySelectorAll('.tool-card')];
+const retiredToolLinks = new Set(['quick-tool.html#support-cost', 'migration-effort-estimator.html']);
+const toolCards = [...document.querySelectorAll('.tool-card')].filter(card => !retiredToolLinks.has(card.getAttribute('href')));
 let activeCategory = 'all';
 
 function filterTools() {
@@ -89,6 +90,7 @@ document.querySelectorAll('.filter-chip').forEach((button) => button.addEventLis
   activeCategory = button.dataset.filter;
   filterTools();
 }));
+if (toolSearch) filterTools();
 if (toolCards.length) filterTools();
 
 if (questionsContainer) questionsContainer.innerHTML = questions.map((question, index) => `
