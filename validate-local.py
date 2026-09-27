@@ -1,6 +1,7 @@
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
+import re
 class Scan(HTMLParser):
  def __init__(self): super().__init__();self.links=[];self.ids=[]
  def handle_starttag(self,tag,attrs):
@@ -13,12 +14,14 @@ parsed={}
 for name,p in files.items():
  s=Scan();s.feed(p.read_text(encoding='utf-8'));parsed[name]=s
 issues=[]
+quick_routes=set(re.findall(r"['\"]([a-z][a-z0-9-]+)['\"]\s*:",Path('quick-tool.js').read_text(encoding='utf-8')))
 for name,s in parsed.items():
  for link in s.links:
   u=urlsplit(link)
   if u.scheme or u.netloc:continue
   target=unquote(u.path) or name
   if not Path(target).exists():issues.append((name,'missing',link))
-  elif u.fragment and target in parsed and u.fragment not in parsed[target].ids:issues.append((name,'anchor',link))
+  elif u.fragment and target in parsed and u.fragment not in parsed[target].ids:
+   if target!='quick-tool.html' or u.fragment not in quick_routes:issues.append((name,'anchor',link))
 print('Link/asset issues:',issues)
 print('Duplicate IDs:',[(n,i) for n,s in parsed.items() for i in set(s.ids) if s.ids.count(i)>1])

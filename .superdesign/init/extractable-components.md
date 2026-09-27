@@ -1,4 +1,14 @@
-# Current extraction scope
-This static site has no standalone framework layout components. Shared inline HTML is recorded in layouts.md. No DraftComponent extraction is selected for the single-screen, directly authored homepage preview.
-# Basic candidates
-PackageCard — source index.html — basic — website package description, price and enquiry link; future extraction can take package name/price/features.
+# Reusable patterns
+## SiteNavigation
+- Source: index.html header
+- Category: layout
+- Props: activeItem
+- Hardcoded: approved logo and routes
+## SiteFooter
+- Source: index.html footer
+- Category: layout
+- Hardcoded: approved logo and business contacts
+## ProjectCard
+- Source: work.html
+- Category: basic
+- Props: project URL

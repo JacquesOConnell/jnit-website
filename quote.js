@@ -3,9 +3,10 @@ const briefStatus = document.querySelector('#brief-status');
 const packages = {
   launch: 'One-page launch website',
   business: 'Professional business website',
-  commerce: 'Online store'
+  commerce: 'Online store',
+  'web-application': 'Custom web application'
 };
-const services = { cloud: 'Cloud foundation for a client product developed or deployed by JNIT', devops: 'DevOps or business automation', operations: 'Cloud operations for a client product developed or deployed by JNIT', care: 'Hosting and website maintenance' };
+const services = { cloud: 'Cloud foundation for a client product developed or deployed by JNIT', devops: 'DevOps or business automation', operations: 'Cloud foundation for a client product developed or deployed by JNIT', care: 'Hosting and website maintenance', application: 'Custom web application', website: 'Website redesign' };
 const params = new URLSearchParams(window.location.search);
 const cloudChoice = briefForm?.querySelector('input[value="Cloud infrastructure or migration"]')?.closest('label');
 if (cloudChoice) {

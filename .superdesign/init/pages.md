@@ -1,16 +1,88 @@
-# /index.html
-Static document, no conditional render branches; CSS media queries adapt layout.
-- index.html
-  - styles.css (legacy shared core; imports web-service.css)
-    - web-service.css
-  - jnit-studio.css
-  - premium.css
-  - jnit-sales.css (final homepage override)
-  - script.js (navigation, WhatsApp, reveals)
-  - studio-motion.js (optional reveals)
-  - site-metrics.js (analytics, omitted from canvas)
-  - assets/jnit-icon.png
-  - images/studio/construction.png
-  - images/studio/wellness.png
-# Other core routes
-Services, applications, work, tools and quote use styles.css + premium.css with their page-specific scripts. Canvas target is homepage opening screen only.
+# Page dependencies
+## index.html
+- site-metrics.js
+- styles.css
+- premium.css
+- cloud-design.css
+- premium-showcase.css
+- brand-stack.css
+- script.js
+## services.html
+- site-metrics.js
+- styles.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- script.js
+- studio-motion.js
+## work.html
+- site-metrics.js
+- styles.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- pawwatch.css
+- script.js
+- studio-motion.js
+## applications.html
+- site-metrics.js
+- styles.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- pawwatch.css
+- script.js
+- studio-motion.js
+## web-development.html
+- site-metrics.js
+- styles.css
+- web-service.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- script.js
+- studio-motion.js
+## tools.html
+- site-metrics.js
+- styles.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- script.js
+- studio-motion.js
+## quote.html
+- site-metrics.js
+- styles.css
+- web-service.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- script.js
+- quote.js
+- studio-motion.js
+## pawwatch.html
+- site-metrics.js
+- styles.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- pawwatch.css
+- script.js
+- studio-motion.js
+## cloudops.html
+- site-metrics.js
+- styles.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- script.js
+- studio-motion.js
+## store.html
+- site-metrics.js
+- styles.css
+- premium.css
+- cloud-design.css
+- brand-stack.css
+- script.js
+- store.js
+- studio-motion.js

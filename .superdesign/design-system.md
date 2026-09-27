@@ -1,4 +1,9 @@
-# JNIT sales-led design
-Audience: South African businesses buying websites. Primary task: explore actual demos, compare scoped website packages, enquire. Website quality is the sales evidence. Web/mobile apps and cloud services remain secondary, custom-quoted.
-Identity: retain actual assets/jnit-icon.png. Paper #f5f6f8, ink #101827, cobalt #1261ff. Manrope headings, DM Sans body. Large tight typography, editorial layouts, generous space, real demo screenshots. Avoid generic IT card catalogue, invented client claims and ornamental robot imagery.
-Keep existing prices and contact details. Local/Xneelo static architecture. No changes to travel site. Restrained entrance/hover motion; reduced-motion support. Mobile navigation and stacked content.
+# JNIT / Connected craft
+Independent digital engineering. Original composition, based on JNIT content.
+Navy #071421, paper #f5f4f0, electric blue #0965ee, ice #94c6ff.
+Manrope 550–650 headings; DM Sans 400–650 body. Body 17px; labels 12px.
+Max content 1440px, fluid 22–104px margins, restrained 14px image corners.
+Approved JNIT logo only. Clear current project status. No vendor badge strips.
+Cloud services support products JNIT builds/deploys; AWS primary, Azure/GCP as required.
+Header and footer shared. Main pages use jnit-design.css directly; tools preserve functionality.
+Research: https://work.co/ , https://linear.app/ , https://www.thoughtworks.com/ . Reviewed for clarity of positioning and product-led storytelling, not copied.

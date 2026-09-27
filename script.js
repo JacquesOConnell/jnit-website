@@ -61,23 +61,27 @@ const resultsSection = document.querySelector('#results');
 
 const toolSearch = document.querySelector('#tool-search');
 const statusFilter = document.querySelector('#status-filter');
-const retiredToolLinks = new Set(['quick-tool.html#support-cost', 'migration-effort-estimator.html']);
-const toolCards = [...document.querySelectorAll('.tool-card')].filter(card => !retiredToolLinks.has(card.getAttribute('href')));
+const toolCards = [...document.querySelectorAll('.tool-card')];
 let activeCategory = 'all';
+let showEveryTool = false;
 
 function filterTools() {
   const query = toolSearch?.value.trim().toLowerCase() || '';
   const status = statusFilter?.value || 'all';
   let visible = 0;
+  const limited = !query && activeCategory === 'all' && !showEveryTool;
   toolCards.forEach((card) => {
     const categoryMatch = activeCategory === 'all' || card.dataset.category.includes(activeCategory);
     const statusMatch = status === 'all' || card.dataset.status === status;
     const searchMatch = !query || card.textContent.toLowerCase().includes(query);
-    card.hidden = !(categoryMatch && statusMatch && searchMatch);
-    if (!card.hidden) visible += 1;
+    const matches = categoryMatch && statusMatch && searchMatch;
+    if (matches) visible += 1;
+    card.hidden = !matches || (limited && visible > 12);
   });
   const count = document.querySelector('#tool-count');
-  if (count) count.textContent = `${visible} ${visible === 1 ? 'tool' : 'tools'} shown`;
+  if (count) count.textContent = limited && visible > 12 ? `Showing 12 of ${visible} tools` : `${visible} ${visible === 1 ? 'tool' : 'tools'} shown`;
+  const more = document.querySelector('#show-all-tools');
+  if (more) { more.hidden = !limited || visible <= 12; more.innerHTML = `Explore all ${visible} tools <span aria-hidden="true">↓</span>`; }
   const empty = document.querySelector('#no-tools');
   if (empty) empty.hidden = visible !== 0;
 }
@@ -86,10 +90,17 @@ toolSearch?.addEventListener('input', filterTools);
 statusFilter?.addEventListener('change', filterTools);
 document.querySelectorAll('.filter-chip').forEach((button) => button.addEventListener('click', () => {
   document.querySelector('.filter-chip.active')?.classList.remove('active');
+  document.querySelectorAll('.filter-chip').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
   button.classList.add('active');
   activeCategory = button.dataset.filter;
   filterTools();
 }));
+document.querySelector('#show-all-tools')?.addEventListener('click', () => { showEveryTool = true; filterTools(); });
+document.querySelector('#clear-tools')?.addEventListener('click', () => {
+  toolSearch.value = ''; activeCategory = 'all'; showEveryTool = false;
+  document.querySelectorAll('.filter-chip').forEach(item => { const all = item.dataset.filter === 'all'; item.classList.toggle('active', all); item.setAttribute('aria-pressed', String(all)); });
+  filterTools(); toolSearch.focus();
+});
 if (toolSearch) filterTools();
 if (toolCards.length) filterTools();
 
@@ -98,7 +109,7 @@ if (questionsContainer) questionsContainer.innerHTML = questions.map((question, 
     <legend><span>${String(index + 1).padStart(2, '0')}</span>${question[0]}</legend>
     <p>${question[1]}</p>
     <div class="question-options" aria-label="${question[0]} rating">
-      ${[1, 2, 3, 4, 5].map((rating) => `<label><input type="radio" name="question-${index}" value="${rating}"><span>${rating}</span></label>`).join('')}
+      ${[1, 2, 3, 4, 5].map((rating) => `<label><input type="radio" name="question-${index}" value="${rating}" aria-label="${question[0]}: ${rating} of 5"><span>${rating}</span></label>`).join('')}
     </div>
   </fieldset>`).join('');
 
