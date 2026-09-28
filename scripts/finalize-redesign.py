@@ -15,6 +15,12 @@ for p in pages:
  if p.name=='quick-tool.html':
   s=re.sub(r'id="quick-result-title"(?: aria-live="polite")*','id="quick-result-title" aria-live="polite"',s)
  s=re.sub(r'((?:src|href)=")([^"?:]+\.(?:js|css))(?:\?[^" ]*)?(")',r'\1\2?v=20260926\3',s)
+ s=s.replace('site-metrics.js?v=20260926','site-metrics.js?v=20260928')
+ if p.name in ('quick-tool.html','backup-storage-calculator.html','website-launch-checklist.html','password-generator.html'):
+  s=s.replace('quick-tool.js?v=20260926','quick-tool.js?v=20260928')
+ if p.name in ('404.html','quick-tool.html') or p.name.startswith('demo-'):
+  if '<meta name="robots"' not in s:
+   s=s.replace('</head>','<meta name="robots" content="noindex,follow"></head>')
  if p.name=='tools.html':
   s=s.replace('jnit-tools.css?v=20260926','jnit-tools.css?v=20260926-tools-button')
  # Shared metadata matches the rebuilt page and preserves social sharing.
@@ -34,7 +40,7 @@ for p in pages:
  # Windows source archives contain CRLF. Normalize once rather than doubling CR.
  s='\n'.join(line.rstrip() for line in s.splitlines())+'\n'
  p.write_text(s,encoding='utf-8',newline='\n')
-sitepages=[p for p in pages if p.name not in ('404.html','quick-tool.html')]
+sitepages=[p for p in pages if p.name not in ('404.html','quick-tool.html') and not p.name.startswith('demo-')]
 sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'  <url><loc>https://jnit.co.za/{"" if p.name=="index.html" else p.name}</loc></url>\n' for p in sitepages)+'</urlset>\n'
 (root/'sitemap.xml').write_text(sitemap,encoding='utf-8',newline='\n')
 print(f'Normalized {len(pages)} pages and updated their sharing metadata and sitemap.')

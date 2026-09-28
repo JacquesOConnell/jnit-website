@@ -2,8 +2,13 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
-import re,zipfile,hashlib,json
+import re,zipfile,hashlib,json,argparse
 root=Path(__file__).resolve().parent.parent
+parser=argparse.ArgumentParser()
+parser.add_argument('--output',default='jnit-premium-redesign-2026-09-26.zip',help='ZIP filename placed at the site root')
+args=parser.parse_args()
+if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*\.zip',args.output):
+ raise SystemExit('Provide a simple .zip filename without directories')
 class Refs(HTMLParser):
  def __init__(self):super().__init__();self.refs=[]
  def handle_starttag(self,tag,attrs):
@@ -31,7 +36,7 @@ while queue:
    if path.startswith('./'):path=path[2:]
    queue.append(path)
 if issues:raise SystemExit('\n'.join(issues))
-archive=root/'jnit-premium-redesign-2026-09-26.zip'
+archive=root/args.output
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
  for name in sorted(files):z.write(root/name,name)
 with zipfile.ZipFile(archive) as z:

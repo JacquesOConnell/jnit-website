@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://jnit.co.za/applications.html</loc></url>
+  <url><loc>https://jnit.co.za/backup-storage-calculator.html</loc></url>
   <url><loc>https://jnit.co.za/cidr-calculator.html</loc></url>
   <url><loc>https://jnit.co.za/cloud-cost-estimator.html</loc></url>
   <url><loc>https://jnit.co.za/cloudops.html</loc></url>
-  <url><loc>https://jnit.co.za/demo-3d.html</loc></url>
-  <url><loc>https://jnit.co.za/demo-construction.html</loc></url>
-  <url><loc>https://jnit.co.za/demo-restaurant.html</loc></url>
-  <url><loc>https://jnit.co.za/demo-wellness.html</loc></url>
   <url><loc>https://jnit.co.za/dns-email-check.html</loc></url>
   <url><loc>https://jnit.co.za/</loc></url>
   <url><loc>https://jnit.co.za/jnit-ledger.html</loc></url>
   <url><loc>https://jnit.co.za/migration-effort-estimator.html</loc></url>
+  <url><loc>https://jnit.co.za/password-generator.html</loc></url>
   <url><loc>https://jnit.co.za/password-policy-builder.html</loc></url>
   <url><loc>https://jnit.co.za/pawwatch.html</loc></url>
   <url><loc>https://jnit.co.za/port-reference.html</loc></url>
@@ -22,5 +20,6 @@
   <url><loc>https://jnit.co.za/store.html</loc></url>
   <url><loc>https://jnit.co.za/tools.html</loc></url>
   <url><loc>https://jnit.co.za/web-development.html</loc></url>
+  <url><loc>https://jnit.co.za/website-launch-checklist.html</loc></url>
   <url><loc>https://jnit.co.za/work.html</loc></url>
 </urlset>
