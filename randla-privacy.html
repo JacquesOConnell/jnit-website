@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061526">
+  <meta name="description" content="How Randla handles your budgeting data, bank statement imports, receipts, subscriptions and encrypted backups.">
+  <link rel="canonical" href="https://jnit.co.za/randla-privacy.html">
+  <link rel="icon" href="https://jnit.co.za/assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <title>Randla Privacy Policy | JNIT Cloud Solutions</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font: 400 16px/1.6 'DM Sans', Arial, sans-serif; }
+    .skip-link { position: absolute; left: 12px; top: -80px; z-index: 10; padding: 10px 14px; background: #fff; color: #123b3a; }
+    .skip-link:focus { top: 12px; }
+    .site-header { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 14px max(5vw, calc((100vw - 1180px)/2)); background: #101d2b; }
+    .site-header .brand-art, .premium-footer .brand-art { display: block; width: 165px; }
+    .site-header .approved-brand-image, .premium-footer .approved-brand-image { display: block; width: 100%; height: auto; }
+    .site-header nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 16px 22px; }
+    .site-header nav a { color: #d7e4f1; text-decoration: none; font-size: 13px; font-weight: 600; }
+    .site-header nav a:hover, .premium-footer a:hover { text-decoration: underline; }
+    .site-header nav .nav-cta { color: #a9c5ff; }
+    .menu-button { display: none; }
+    .premium-footer { padding: 52px 5vw 24px; background: #101d2b; color: #c6d3e1; }
+    .premium-footer .footer-columns { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; max-width: 1180px; margin: 0 auto 42px; }
+    .premium-footer h2 { margin: 0 0 14px; color: #fff; font: 700 15px Manrope, Arial, sans-serif; }
+    .premium-footer p { margin: 14px 0 4px; }
+    .premium-footer a { display: block; width: fit-content; margin-bottom: 8px; color: #c6d3e1; text-decoration: none; }
+    .premium-footer .footer-baseline { display: flex; justify-content: space-between; gap: 20px; max-width: 1180px; margin: auto; padding-top: 20px; border-top: 1px solid #324459; font-size: 12px; }
+    .randla-policy { background: #f6f7f5; color: #142337; }
+    .randla-policy .policy-hero { background: #101d2b; color: #fff; padding: clamp(64px, 8vw, 112px) 5vw 74px; }
+    .randla-policy .policy-hero-inner { max-width: 1100px; margin: auto; }
+    .randla-policy .policy-kicker { color: #a9bcd4; font: 600 12px/1.5 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+    .randla-policy .policy-hero h1 { max-width: 800px; margin: 15px 0 22px; font: 800 clamp(46px, 6vw, 82px)/1.08 Manrope, sans-serif; letter-spacing: -.055em; }
+    .randla-policy .policy-hero h1 em { color: #9bbcff; font-style: normal; }
+    .randla-policy .policy-lead { max-width: 720px; margin: 0; color: #c6d3e1; font-size: clamp(17px, 2vw, 21px); line-height: 1.65; }
+    .randla-policy .policy-meta { margin: 25px 0 0; color: #9eb4ca; font-size: 14px; }
+    .randla-policy .policy-layout { display: grid; grid-template-columns: minmax(180px, 230px) minmax(0, 760px); gap: clamp(32px, 5vw, 82px); max-width: 1180px; margin: auto; padding: 64px 5vw 96px; }
+    .randla-policy .policy-nav { display: block; align-self: start; position: sticky; top: 24px; border-top: 3px solid #2463eb; padding-top: 20px; }
+    .randla-policy .policy-nav strong { display: block; margin-bottom: 14px; color: #56677a; font: 700 11px Manrope, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+    .randla-policy .policy-nav a { display: block; padding: 7px 0; color: #294567; font-size: 14px; text-decoration: none; }
+    .randla-policy .policy-nav a:hover, .randla-policy .policy-copy a:hover { text-decoration: underline; }
+    .randla-policy .policy-copy { min-width: 0; font: 400 16px/1.75 'DM Sans', sans-serif; }
+    .randla-policy .policy-copy a { color: #174fc3; text-decoration: underline; text-underline-offset: 3px; }
+    .randla-policy .policy-copy p, .randla-policy .policy-copy li { color: #405265; }
+    .randla-policy .policy-summary { margin: 0 0 44px; padding: 25px 28px; border-left: 4px solid #2463eb; background: #e9eff8; }
+    .randla-policy .policy-summary strong { color: #152d50; }
+    .randla-policy .policy-summary p { margin: 8px 0 0; }
+    .randla-policy .policy-section { padding: 0 0 18px; margin: 0 0 32px; border-bottom: 1px solid #d5dde5; scroll-margin-top: 24px; }
+    .randla-policy .policy-section h2 { margin: 0 0 14px; color: #101d2b; font: 800 clamp(23px, 3vw, 30px)/1.25 Manrope, sans-serif; letter-spacing: -.025em; }
+    .randla-policy .policy-section p { margin: 0 0 16px; }
+    .randla-policy .policy-section ul { padding-left: 1.3em; margin: 0 0 18px; }
+    .randla-policy .policy-section li { margin: 7px 0; }
+    .randla-policy .policy-contact { margin: 0; padding: 25px 28px; background: #101d2b; color: #fff; border-radius: 3px; }
+    .randla-policy .policy-contact h2 { margin: 0 0 9px; color: #fff; font: 800 26px Manrope, sans-serif; }
+    .randla-policy .policy-contact p { color: #c6d3e1; margin: 0; }
+    .randla-policy .policy-contact a { color: #a9c5ff; }
+    @media (max-width: 760px) {
+      .site-header { align-items: flex-start; flex-direction: column; gap: 18px; }
+      .site-header nav { justify-content: flex-start; }
+      .randla-policy .policy-layout { display: block; padding-top: 40px; }
+      .randla-policy .policy-nav { position: static; margin-bottom: 38px; }
+      .randla-policy .policy-nav a { display: inline-block; margin: 0 18px 7px 0; }
+      .premium-footer .footer-columns { grid-template-columns: 1fr; gap: 28px; }
+      .premium-footer .footer-baseline { flex-direction: column; }
+    }
+  </style>
+</head>
+<body class="premium-site randla-policy">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand unified-brand stacked-brand" href="https://jnit.co.za/index.html" aria-label="JNIT Cloud Solutions home">
+      <span class="brand-art"><img class="approved-brand-image" src="https://jnit.co.za/01-Logos/JNIT-Stacked-Transparent.png" alt="JNIT Cloud Solutions (Pty) Ltd"></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation"><span></span><span></span><span></span><b>Menu</b></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="https://jnit.co.za/services.html">Services</a>
+      <a href="https://jnit.co.za/work.html">Our work</a>
+      <a href="https://jnit.co.za/web-development.html">Websites</a>
+      <a href="https://jnit.co.za/applications.html">Applications</a>
+      <a href="https://jnit.co.za/tools.html">Tools</a>
+      <a href="https://jnit.co.za/quote.html" class="nav-cta">Discuss your project ↗</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="policy-hero" aria-labelledby="policy-title">
+      <div class="policy-hero-inner">
+        <p class="policy-kicker">JNIT Cloud Solutions / Randla</p>
+        <h1 id="policy-title">Your money.<br><em>Your privacy.</em></h1>
+        <p class="policy-lead">How Randla handles the information you enter, the files you choose to import, your Pro subscription and optional encrypted backups.</p>
+        <p class="policy-meta">Privacy Policy · Effective 17 September 2026</p>
+      </div>
+    </section>
+    <div class="policy-layout">
+      <nav class="policy-nav" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#overview">Overview</a>
+        <a href="#information">Information you provide</a>
+        <a href="#storage">Storage and backups</a>
+        <a href="#subscriptions">Pro subscriptions</a>
+        <a href="#permissions">Permissions and sharing</a>
+        <a href="#analytics">Advertising and analytics</a>
+        <a href="#choices">Retention and choices</a>
+        <a href="#children">Children and changes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="policy-copy">
+        <section class="policy-summary" id="overview" aria-label="Privacy at a glance">
+          <strong>Privacy at a glance</strong>
+          <p>Randla keeps your budgeting records on your device. It does not connect to your bank or send your statements, transactions or receipt images to a Randla server. If you choose an off-device backup, Randla encrypts it before writing it to the folder you select.</p>
+        </section>
+        <section class="policy-section" id="information">
+          <h2>Information you provide</h2>
+          <p>You can enter accounts, balances, budgets, bills, transactions, categories and notes. If you choose to import a bank statement or CSV file, the app reads that file on your device and lets you review extracted transactions before saving them. A password entered to open a protected statement is used for that import and is not saved as a Randla setting.</p>
+          <p>If you choose receipt capture, the app uses the camera or an image you select to extract a draft transaction for your review. A receipt image is retained only when you choose that option.</p>
+        </section>
+        <section class="policy-section" id="storage">
+          <h2>Storage and backups</h2>
+          <p>Financial records and settings are stored locally in the app on your device. Randla does not operate a user-account service or a database of your financial records.</p>
+          <p>You can create a local encrypted backup. Randla Pro can also write encrypted backup files to a folder you choose through Android's document provider. If you enable automatic backup, the app checks whether a day has passed when it opens and can write another encrypted backup to that folder. The storage provider may sync or store those files under its own terms and privacy policy. Check that it has synced your backup. Randla cannot recover a forgotten backup password.</p>
+        </section>
+        <section class="policy-section" id="subscriptions">
+          <h2>Google Play subscriptions</h2>
+          <p>If you choose Randla Pro, Google Play processes the purchase and manages the subscription. To confirm whether Pro is active, the app sends the Google Play purchase token and product identifiers over HTTPS to Randla's verification service hosted on Amazon Web Services in South Africa. That service asks Google Play to verify the subscription and returns the entitlement status to the app. It does not request or store your bank statements, transactions, receipts or backups. We do not receive your full payment-card number.</p>
+          <p>Google Play may process purchase and device information under <a href="https://policies.google.com/privacy">Google's privacy policy</a>. Amazon Web Services processes the verification request as our infrastructure provider.</p>
+        </section>
+        <section class="policy-section" id="permissions">
+          <h2>Permissions and sharing</h2>
+          <p>Randla requests access to a statement, backup or image only when you choose it through the device picker. Camera permission is requested if you choose to photograph a receipt. You control exports and backups; sharing a report or backup with another app or storage provider makes that file subject to the recipient's practices. New Randla backups are encrypted before export. Keep the password and any exported files safe.</p>
+        </section>
+        <section class="policy-section" id="analytics">
+          <h2>Advertising and analytics</h2>
+          <p>Randla does not include third-party advertising or an in-app analytics service. We do not sell your financial information or use it for advertising. Google Play and your device operating system may collect diagnostics or purchase-related information under their own policies. When you visit this policy page, the website host may receive standard connection information, such as your IP address.</p>
+        </section>
+        <section class="policy-section" id="choices">
+          <h2>Retention and your choices</h2>
+          <p>You can edit or delete records in the app. Clearing Randla's app data or uninstalling it removes its local records from that device, subject to any device backup features you may have enabled. Files you exported or backed up outside the app are not deleted when you clear or uninstall it; delete those separately from the location where you saved them. Randla does not keep a server-side copy of your financial records to recover later.</p>
+        </section>
+        <section class="policy-section" id="children">
+          <h2>Children and changes</h2>
+          <p>Randla is intended for adults managing their own finances and is not directed to children. We may update this policy when the app or its data practices change. The current version will be available on this page with an updated effective date.</p>
+        </section>
+        <section class="policy-contact" id="contact">
+          <h2>Questions about privacy?</h2>
+          <p>Randla is provided by JNIT Cloud Solutions. Email <a href="mailto:support@jnit.co.za">support@jnit.co.za</a> with privacy questions or requests.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="premium-footer">
+    <div class="footer-columns">
+      <div>
+        <a class="footer-brand unified-footer-brand stacked-brand" href="https://jnit.co.za/index.html" aria-label="JNIT Cloud Solutions home"><span class="brand-art"><img class="approved-brand-image" src="https://jnit.co.za/01-Logos/JNIT-Stacked-Transparent.png" alt="JNIT Cloud Solutions (Pty) Ltd"></span></a>
+        <p>Cloud engineering, digital products<br>and premium web experiences.</p>
+        <small>Johannesburg · South Africa</small>
+      </div>
+      <div><h2>Explore</h2><a href="https://jnit.co.za/services.html">Our services</a><a href="https://jnit.co.za/work.html">Engineering portfolio</a><a href="https://jnit.co.za/applications.html">Applications</a><a href="https://jnit.co.za/tools.html">Free tools</a></div>
+      <div><h2>Let's talk</h2><a href="mailto:support@jnit.co.za">support@jnit.co.za</a><a href="https://jnit.co.za/quote.html">Start a conversation ↗</a></div>
+    </div>
+    <div class="footer-baseline"><span>© 2026 JNIT Cloud Solutions</span><span>Cloud / Products / Experiences</span></div>
+  </footer>
+</body>
+</html>
+
+

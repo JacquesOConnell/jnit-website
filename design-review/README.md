@@ -17,7 +17,7 @@ All 24 active HTML pages share the redesigned presentation. The tools directory 
 
 The four demo sites show distinct visual directions: IRON/WOOD construction, still. wellness, TERRA NOIR dining and AURA lighting. AURA includes a real interactive 3D lamp with rotation, finishes and lighting controls. Demo enquiries are sample interactions only.
 
-LifeWallet, PawWatch, CloudOps and existing commercial content remain represented. JNIT's cloud scope remains tied to products it develops or deploys for clients. CloudOps is described as captured demonstration evidence, and PawWatch remains a personal project with illustrative AI scenes.
+Randla, PawWatch, CloudOps and existing commercial content remain represented. JNIT's cloud scope remains tied to products it develops or deploys for clients. CloudOps is described as captured demonstration evidence, and PawWatch remains a personal project with illustrative AI scenes.
 
 ## Validation
 
