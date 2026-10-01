@@ -39,13 +39,14 @@ images/products/jnit-ledger/ledger-accounting-controls.png
 images/products/jnit-ledger/ledger-analytics-demo.png
 images/products/jnit-ledger/ledger-banking-inventory.png
 images/products/jnit-ledger/ledger-sales-documents.png
-images/products/lifewallet-home.png
 images/products/pawwatch/pawwatch-call-scene.webp
 images/products/pawwatch/pawwatch-iphone-call.webp
 images/products/pawwatch/pawwatch-iphone-check.webp
 images/products/pawwatch/pawwatch-iphone-home.webp
 images/products/pawwatch/pawwatch-tv-home.webp
 images/products/pawwatch/pawwatch-tv-ready.webp
+images/products/randla-accounts.png
+images/products/randla-home.png
 images/services/cloud-systems.webp
 images/services/digital-experiences.webp
 images/services/digital-products.webp
@@ -71,6 +72,7 @@ quick-tool.html
 quick-tool.js
 quote.html
 quote.js
+randla-privacy.html
 recovery-objective-planner.html
 recovery-objective-planner.js
 robots.txt
